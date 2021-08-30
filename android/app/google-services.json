@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "36536177638",
+    "project_id": "nlpower-ab4d1",
+    "storage_bucket": "nlpower-ab4d1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:36536177638:android:146a0d53d2e7d5779fbc27",
+        "android_client_info": {
+          "package_name": "com.bestcybernetics.nlpower"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "36536177638-s71m3a0ngfnok98ro5gppnj6gtocndcb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJ17PhRXlBIYn2Dm8t9Gu2fiIhljlrLbU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "36536177638-s71m3a0ngfnok98ro5gppnj6gtocndcb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
