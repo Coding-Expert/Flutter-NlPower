@@ -73,7 +73,7 @@ class AudioWidgetState extends State<AudioWidget> {
       padding: EdgeInsets.all(20.0),
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: NetworkImage(widget.group.item_details.photo),
+              image: NetworkImage(widget.group.item_details[0].photo),
               fit: BoxFit.fill)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -119,11 +119,11 @@ class AudioWidgetState extends State<AudioWidget> {
                 SizedBox(
                   height: 10,
                 ),
-                Text(widget.group.item_details.title,style: TextStyle(color: Colors.white.withOpacity(0.5), fontSize: 18)),
+                Text(widget.group.item_details[0].title,style: TextStyle(color: Colors.white.withOpacity(0.5), fontSize: 18)),
                 SizedBox(
                   height: 10,
                 ),
-                Text(widget.group.item_details.descr,style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold)),
+                Text(widget.group.item_details[0].descr,style: TextStyle(color: Colors.white,fontSize: 18,fontWeight: FontWeight.bold)),
               ],
             ),
           ),
@@ -137,7 +137,7 @@ class AudioWidgetState extends State<AudioWidget> {
                       child: RaisedButton(
                         onPressed: isPlaying == false ?
                         () {
-                          DailyModule.setTracking(widget.group.day_id, widget.group.media_id, widget.group.item_details.duration).then((value) {
+                          DailyModule.setTracking(widget.group.day_id, widget.group.media_id, widget.group.item_details[0].duration).then((value) {
                             if(value == "success"){
                               Toast.show("Tracking is success", context);
                             }
@@ -263,7 +263,7 @@ class AudioWidgetState extends State<AudioWidget> {
 
   void play() async {
     int result = await advancedPlayer.play("https://app.metamathesis.edu.gr/" +
-        widget.group.item_details.media); // play for remote file
+        widget.group.item_details[0].media); // play for remote file
     // audioCache.play('audio.mp3');    // play for assets
     if (result == 1) {
       setState(() {

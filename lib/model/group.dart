@@ -13,7 +13,7 @@ class Group{
   String date_created;
   String date_updated;
   String sort;
-  ItemDetail item_details;
+  List<ItemDetail> item_details;
 
   Group({
     this.day_id,
@@ -38,7 +38,7 @@ class Group{
     date_created: json["date_created"],
     date_updated: json["date_updated"],
     sort: json["sort"],
-    item_details: ItemDetail.fromJson(json["item_details"])
+    item_details: List<ItemDetail>.from(json["item_details"].map((x) => ItemDetail.fromJson(x)))
   );
 
   Map<String, dynamic> toJson()=> {
@@ -51,6 +51,6 @@ class Group{
     "date_created": date_created,
     "date_updated": date_updated,
     "sort": sort,
-    "item_details": item_details
+    "item_details": List<dynamic>.from(item_details.map((e) => e.toJson()))
   };
 }
